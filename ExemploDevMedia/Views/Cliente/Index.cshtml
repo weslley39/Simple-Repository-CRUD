@@ -1,0 +1,33 @@
+﻿@model  List<ExemploDevMedia.Models.Clientes>
+@{
+    ViewBag.Title = "Index";
+}
+<h1>
+    Listagem de Clientes</h1>
+<table>
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Idade
+        </th>
+    </tr>
+
+    @foreach (var clientes in Model)
+    {
+        <tr>
+        <td>@Html.DisplayFor(f => clientes.id)
+        </td>
+        <td>@Html.DisplayFor(f => clientes.Nome)
+        </td>
+        <td>@Html.DisplayFor(f => clientes.Idade) 
+        </td>
+        </tr>
+    }
+
+
+</table>

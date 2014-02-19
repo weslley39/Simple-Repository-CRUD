@@ -1,0 +1,20 @@
+﻿@model ExemploDevMedia.Models.Clientes
+@{
+    ViewBag.Title = "Inserir";
+}
+<h2>
+    Inserir</h2>
+
+@using (@Html.BeginForm())
+{
+<div>
+    @Html.LabelFor(cli => cli.Nome)
+    @Html.EditorFor(cli => cli.Nome)
+</div>
+<div>
+    @Html.LabelFor(cli => cli.Idade)
+    @Html.EditorFor(cli => cli.Idade)
+</div>
+<br />
+<input type="submit" value="Inserir" />
+}
